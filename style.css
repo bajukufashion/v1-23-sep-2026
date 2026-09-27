@@ -385,8 +385,7 @@ h1 {
 }
 
 .filter-btn,
-.gallery-btn,
-.social-link {
+.gallery-btn {
   transition: all 0.25s ease;
 }
 
@@ -1142,11 +1141,14 @@ h1 {
 }
 
 .footer-list {
-  margin-top: 1.2rem;
+  margin: 1rem 0 0;
+  padding: 0;
   display: grid;
-  gap: 0.7rem;
+  gap: 0.65rem;
   color: #ddd5c8;
   font-size: 0.95rem;
+  line-height: 1.5;
+  list-style: none;
 }
 
 .footer-list a {
@@ -1199,25 +1201,6 @@ footer a {
 
 footer a:hover {
   color: #f3c4a4;
-}
-
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.social-link:hover {
-  background: rgba(249, 115, 22, 0.2);
-  color: #fed7aa;
 }
 
 .reveal {
