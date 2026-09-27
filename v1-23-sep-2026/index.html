@@ -8,6 +8,7 @@
       name="description"
       content="Bajuku Fashion menghadirkan koleksi set rok, blus, dan kimono berkualitas dengan desain modern dan nyaman untuk setiap aktivitas."
     />
+    <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-[#f7f4f1] text-slate-800 antialiased">
@@ -24,14 +25,21 @@
           <a href="index.html#kontak" class="nav-link">Kontak</a>
         </nav>
 
+        <div class="theme-controls">
+          <button type="button" class="theme-toggle" aria-label="Aktifkan tema gelap" aria-pressed="false"><span aria-hidden="true">☾</span></button>
+          <aside class="theme-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+            <span data-theme-toast-message></span>
+            <button type="button" class="theme-toast-close" aria-label="Tutup pesan tema">×</button>
+          </aside>
+        </div>
         <a href="#produk" class="primary-btn header-cta">Belanja</a>
       </div>
     </header>
 
-    <div class="ticker" aria-label="Bajuku Fashion, tampil anggun, nyaman sepanjang hari, gaya percaya diri">
+    <div class="ticker" aria-label="Bajuku Fashion, tampil anggun, nyaman sepanjang hari, gaya percaya diri, koleksi istimewa">
       <div class="ticker-track" aria-hidden="true">
-        <div class="ticker-group"><span>Bajuku Fashion</span><i>✳</i><span>Tampil anggun di setiap kesempatan</span><i>✳</i><span>Nyaman menemani langkahmu</span><i>✳</i><span>Temukan gaya yang paling kamu sukai</span><i>✳</i><span>Detail manis, pesona istimewa</span><i>✳</i><span>Rayakan cantik versimu</span><i>✳</i><span>Fashion wanita untuk hari penuh cerita</span><i>✳</i><span>Percaya diri, jadi diri sendiri</span><i>✳</i></div>
-        <div class="ticker-group"><span>Bajuku Fashion</span><i>✳</i><span>Tampil anggun di setiap kesempatan</span><i>✳</i><span>Nyaman menemani langkahmu</span><i>✳</i><span>Temukan gaya yang paling kamu sukai</span><i>✳</i><span>Detail manis, pesona istimewa</span><i>✳</i><span>Rayakan cantik versimu</span><i>✳</i><span>Fashion wanita untuk hari penuh cerita</span><i>✳</i><span>Percaya diri, jadi diri sendiri</span><i>✳</i></div>
+        <div class="ticker-group"><span>Bajuku Fashion</span><i>✳</i><span>Tampil anggun di setiap kesempatan</span><i>✳</i><span>Nyaman menemani langkahmu</span><i>✳</i><span>Temukan gaya yang paling kamu sukai</span><i>✳</i><span>Detail manis, pesona istimewa</span><i>✳</i><span>Rayakan cantik versimu</span><i>✳</i><span>Fashion wanita untuk hari penuh cerita</span><i>✳</i><span>Percaya diri, jadi diri sendiri</span><i>✳</i><span>Koleksi istimewa untukmu</span><i>✳</i><span>Cantik dan nyaman sepanjang hari</span><i>✳</i><span>Gaya percaya diri dimulai dari sini</span><i>✳</i><span>Temukan kenyamanan dalam setiap langkah</span><i>✳</i></div>
+        <div class="ticker-group"><span>Bajuku Fashion</span><i>✳</i><span>Tampil anggun di setiap kesempatan</span><i>✳</i><span>Nyaman menemani langkahmu</span><i>✳</i><span>Temukan gaya yang paling kamu sukai</span><i>✳</i><span>Detail manis, pesona istimewa</span><i>✳</i><span>Rayakan cantik versimu</span><i>✳</i><span>Fashion wanita untuk hari penuh cerita</span><i>✳</i><span>Percaya diri, jadi diri sendiri</span><i>✳</i><span>Koleksi istimewa untukmu</span><i>✳</i><span>Cantik dan nyaman sepanjang hari</span><i>✳</i><span>Gaya percaya diri dimulai dari sini</span><i>✳</i><span>Temukan kenyamanan dalam setiap langkah</span><i>✳</i></div>
       </div>
     </div>
 
@@ -46,8 +54,8 @@
               <span class="inline-block h-2.5 w-2.5 rounded-full bg-brand-500"></span>
               Koleksi terbaru 2026
             </span>
-            <h1 class="mt-6 max-w-xl text-4xl font-extrabold leading-[1.05] tracking-[-0.06em] text-slate-900 sm:text-5xl lg:text-[4.3rem]">
-              Temukan <span class="gradient-text">gaya istimewa</span>
+            <h1 class="hero-title mt-6 max-w-xl text-4xl font-extrabold leading-[1.05] tracking-[-0.06em] text-slate-900 sm:text-5xl lg:text-[4.3rem]">
+              Temukan <span class="gradient-text">Pakaian istimewa</span>
             </h1>
             <p class="mt-6 max-w-lg text-base leading-8 text-slate-600 sm:text-lg">
               Koleksi premium untuk tampilan yang lebih anggun, lebih percaya diri, dan siap menemani setiap momen penting dalam hidup Anda.
@@ -76,11 +84,11 @@
 
           <div class="hero-visual reveal">
             <div class="hero-card main-card">
-              <img src="assets/img/aruna-set-rok/aruna-set-rok-burgundy.avif" alt="Aruna setelan rok warna burgundy" loading="eager" fetchpriority="high" />
+              <img src="assets/img/aruna-set-rok/aruna-set-rok-burgundy.avif" alt="Set Rok Aruna warna burgundy" loading="eager" fetchpriority="high" />
             </div>
             <div class="floating-tag tag-left">
               <span>Terlaris</span>
-              <strong>Aruna Setelan Rok</strong>
+              <strong>Set Rok Aruna</strong>
               <em>IDR 119.000</em>
             </div>
             <div class="floating-tag tag-right">
@@ -104,7 +112,7 @@
             <div class="feature-ico">⚡</div>
             <div>
               <h3>Pengiriman cepat</h3>
-              <p>Hingga 24 jam ke kota utama</p>
+              <p>Mulai dari 24 jam ke Pekalongan</p>
             </div>
           </div>
           <div class="feature-item">
@@ -124,13 +132,13 @@
         </div>
 
         <div class="product-grid">
-          <a class="product-card-link reveal" href="aruna.html" aria-label="Lihat detail Aruna Setelan Rok">
+          <a class="product-card-link reveal" href="aruna.html" aria-label="Lihat detail Set Rok Aruna">
             <article class="product-card">
               <div class="product-image-wrap">
-                <img src="assets/img/aruna-set-rok/aruna-set-rok-burgundy.avif" alt="Aruna setelan rok warna burgundy" loading="lazy" />
+                <img src="assets/img/aruna-set-rok/aruna-set-rok-burgundy.avif" alt="Set Rok Aruna warna burgundy" loading="lazy" />
               </div>
-              <p class="product-type">Setelan katun rayon</p>
-              <h3 class="product-name">Aruna Setelan Rok</h3>
+              <p class="product-type">SETELAN ROK BAHAN KATUN</p>
+              <h3 class="product-name">Set Rok Aruna</h3>
               <div class="product-card-bottom"><p class="price">IDR 119.000</p><span class="detail-link">Lihat detail <span aria-hidden="true">→</span></span></div>
             </article>
           </a>
@@ -140,7 +148,7 @@
               <div class="product-image-wrap">
                 <img src="assets/img/blus-atasan/blus-viona-DustyPink.avif" alt="Blus Viona warna merah muda dusty pink" loading="lazy" />
               </div>
-              <p class="product-type">Blus polo linen dan rayon</p>
+              <p class="product-type">BAHAN POLO LINEN &amp; RAYON MOTIF</p>
               <h3 class="product-name">Blus Viona</h3>
               <div class="product-card-bottom"><p class="price">IDR 45.000</p><span class="detail-link">Lihat detail <span aria-hidden="true">→</span></span></div>
             </article>
@@ -151,7 +159,7 @@
               <div class="product-image-wrap">
                 <img src="assets/img/set-rok-kimono/set-rok-kimono-mocca1.avif" alt="Set rok kimono rayon twill warna moca" loading="lazy" />
               </div>
-              <p class="product-type">Rayon twill</p>
+              <p class="product-type">BAHAN RAYON TWILL PREMIUM</p>
               <h3 class="product-name">Set Rok Kimono Moca</h3>
               <div class="product-card-bottom"><p class="price">IDR 125.000</p><span class="detail-link">Lihat detail <span aria-hidden="true">→</span></span></div>
             </article>

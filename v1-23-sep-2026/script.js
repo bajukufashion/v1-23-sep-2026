@@ -14,6 +14,68 @@ document.querySelectorAll('.reveal').forEach((element) => observer.observe(eleme
 const yearElement = document.getElementById('year');
 if (yearElement) yearElement.textContent = '2026';
 
+const themeToast = document.querySelector('.theme-toast');
+const themeToastMessage = document.querySelector('[data-theme-toast-message]');
+const themeToastClose = document.querySelector('.theme-toast-close');
+const themeToggle = document.querySelector('.theme-toggle');
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+const themeStorageKey = 'bajuku-theme';
+const savedTheme = window.localStorage.getItem(themeStorageKey);
+let toastTimeout;
+
+function getCurrentTheme() {
+  return document.documentElement.dataset.theme;
+}
+
+function updateThemeControls() {
+  const isDark = getCurrentTheme() === 'dark';
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', `Aktifkan tema ${isDark ? 'terang' : 'gelap'}`);
+    themeToggle.querySelector('span').textContent = isDark ? '☀' : '☾';
+  }
+  if (themeToastMessage) {
+    themeToastMessage.textContent = `Tema ${isDark ? 'gelap' : 'terang'} aktif. Tekan tombol untuk beralih ke tema ${isDark ? 'terang' : 'gelap'}.`;
+  }
+}
+
+function showThemeToast() {
+  if (!themeToast) return;
+  window.clearTimeout(toastTimeout);
+  themeToast.hidden = false;
+  toastTimeout = window.setTimeout(() => {
+    themeToast.hidden = true;
+  }, 4500);
+}
+
+document.documentElement.dataset.theme =
+  savedTheme === 'dark' || savedTheme === 'light'
+    ? savedTheme
+    : systemTheme.matches ? 'dark' : 'light';
+updateThemeControls();
+
+themeToggle?.addEventListener('click', () => {
+  const nextTheme = getCurrentTheme() === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = nextTheme;
+  window.localStorage.setItem(themeStorageKey, nextTheme);
+  updateThemeControls();
+  showThemeToast();
+});
+
+systemTheme.addEventListener('change', (event) => {
+  if (window.localStorage.getItem(themeStorageKey)) return;
+  document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
+  updateThemeControls();
+});
+
+if (themeToast) {
+  window.setTimeout(showThemeToast, 300);
+  themeToastClose?.addEventListener('click', () => {
+    window.clearTimeout(toastTimeout);
+    themeToast.hidden = true;
+  });
+}
+
 const colorButtons = [...document.querySelectorAll('[data-color-choice]')];
 const productImage = document.querySelector('.detail-main-image');
 const selectedColorLabel = document.querySelector('.selected-color');
